@@ -7,7 +7,7 @@
 * **Nome:** Diogo António Sousa Garcia Costa
 * **ID:** A107328
 
-![foto_muito_bem_tirada](foto.png)
+![Foto do Autor](foto.png)
 
 ## Resumo
 Este trabalho consistiu na criação de um script em Python para processar um dataset de reparações de uma oficina automóvel (`dataset_reparacoes.json`) e gerar um website para consulta desses dados.
