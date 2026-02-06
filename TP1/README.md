@@ -1,6 +1,6 @@
 # TPC1 : Análise de um Dataset de Reparações
 
-## Data: 5 de Fev. 2026
+## Data: 5 de Fevereiro de 2026
 ## EngenhariaWeb2026
 
 ## Autor
@@ -28,4 +28,5 @@ O processamento foi dividido nas seguintes etapas:
 ## Lista de Resultados
 * [tpc1.py](./tpc1.py) - O script Python desenvolvido.
 * [dataset_reparacoes.json](./dataset_reparacoes.json) - O ficheiro de dados original.
+* [site_reparacoes/](./site_reparacoes/) - Pasta de output contendo todo o website gerado.
 * [site_reparacoes/index.html](./site_reparacoes/index.html) - A página principal do website gerado.
