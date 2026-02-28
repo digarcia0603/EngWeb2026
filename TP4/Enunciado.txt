@@ -1,0 +1,8 @@
+1. Colocar o dataset dos EMD no json-server;
+2. Crias um servdior aplicacional para servir as seguintes rotas:
+    a) GET '/' ou '/end' =» pág. principal -----------------------------------------------
+                                           | nome     data     modalidade      resultado |
+                                           |---------------------------------------------|
+                                           |                                             |
+    
+    b) GET '/end/:id' => pág. do EMD 

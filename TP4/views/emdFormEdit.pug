@@ -1,0 +1,57 @@
+extends layout
+
+block content
+  .w3-card-4
+    header.w3-container.w3-teal
+      h1 Editar Exame Médico: #{exame.id}
+    
+    form.w3-container.w3-padding(method="POST" action=`/emd/${exame.id}`)
+      fieldset.w3-margin-bottom
+        legend Dados Pessoais
+        
+        label ID
+        input.w3-input.w3-border.w3-light-grey(type="text" name="id" value=exame.id readonly)
+
+        label Primeiro Nome
+        input.w3-input.w3-border(type="text" name="primeiro" value=exame.nome.primeiro required)
+        
+        label Último Nome
+        input.w3-input.w3-border(type="text" name="último" value=exame.nome.último required)
+        
+        label Idade
+        input.w3-input.w3-border(type="number" name="idade" value=exame.idade required)
+        
+        label Género
+        select.w3-select.w3-border(name="género" required)
+          option(value="M" selected=(exame.género == 'M')) Masculino
+          option(value="F" selected=(exame.género == 'F')) Feminino
+          
+        label Morada
+        input.w3-input.w3-border(type="text" name="morada" value=exame.morada required)
+        
+        label Email
+        input.w3-input.w3-border(type="email" name="email" value=exame.email required)
+
+      fieldset.w3-margin-bottom
+        legend Dados Desportivos e Exame
+        label Data do Exame
+        input.w3-input.w3-border(type="date" name="dataEMD" value=exame.dataEMD required)
+        
+        label Modalidade
+        input.w3-input.w3-border(type="text" name="modalidade" value=exame.modalidade required)
+        
+        label Clube
+        input.w3-input.w3-border(type="text" name="clube" value=exame.clube required)
+        
+        label Federado?
+        select.w3-select.w3-border(name="federado" required)
+          option(value="true" selected=(exame.federado == true || exame.federado == 'true')) Sim
+          option(value="false" selected=(exame.federado == false || exame.federado == 'false')) Não
+          
+        label Resultado
+        select.w3-select.w3-border(name="resultado" required)
+          option(value="true" selected=(exame.resultado == true || exame.resultado == 'true')) Apto
+          option(value="false" selected=(exame.resultado == false || exame.resultado == 'false')) Não Apto
+
+      button.w3-btn.w3-teal.w3-margin-top(type="submit") Guardar Alterações
+      a.w3-btn.w3-red.w3-margin-top.w3-margin-left(href=`/emd/${exame.id}`) Cancelar
