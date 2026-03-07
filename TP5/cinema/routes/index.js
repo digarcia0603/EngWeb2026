@@ -72,7 +72,7 @@ router.get('/atores/:id', function(req, res, next) {
   })
 })
 
-/* c) GET /genero */
+/* e) GET /genero */
 router.get('/genero', function(req, res, next) {
   var d = new Date().toISOString().substring(0, 16)
 
@@ -105,7 +105,7 @@ router.get('/genero', function(req, res, next) {
 
 })
 
-/* d) GET /genero/:id */
+/* f) GET /genero/:id */
 router.get('/genero/:id', function(req, res, next) {
   var d = new Date().toISOString().substring(0, 16);
   var nomeGenero = req.params.id;
