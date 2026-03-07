@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  .w3-card-4
+    header.w3-container.w3-teal
+      h1 Página do Ator: #{ator}
+    
+    .w3-container.w3-margin-top
+      h3 Filmes em que participou:
+      if filmes && filmes.length > 0
+        ul.w3-ul.w3-card-4.w3-hoverable
+          each f in filmes
+            li
+              a(href=`/filmes/${f.id}`)= f.title
+      else
+        p Não foram encontrados filmes para este ator.
+
+    footer.w3-container.w3-teal.w3-margin-top
+      a.w3-button.w3-white.w3-margin(href="/atores") Voltar à lista de Atores
