@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  .w3-container.w3-teal
+    h1 Filme: #{filme.title}
+  .w3-container.w3-margin-top
+    ul.w3-ul.w3-card-4
+      li
+        b ID: 
+        | #{filme._id}
+      li
+        b Título: 
+        | #{filme.title}
+      li
+        b Ano: 
+        | #{filme.year}
+      li
+        b Elenco:
+        ul
+          each ator in filme.cast
+            li= ator
+      li
+        b Géneros:
+        ul
+          each gen in filme.genres
+            li= gen
+    br
+    a.w3-button.w3-teal(href="/filmes") Voltar aos Filmes
